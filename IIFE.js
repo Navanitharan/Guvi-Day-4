@@ -22,15 +22,35 @@
 // }([1,2,3,4,5,6,7,8]))
 
 //4.PRIME NUMBERS
-(function ( arr ) {
-    for(var i=0;i<arr.length;i++){
-        var count=0;
-        for(var j=2;j<arr[i];j++){
-            if(arr[i]%j==0)
-            count++;
+// (function ( arr ) {
+//     for(var i=0;i<arr.length;i++){
+//         var count=0;
+//         for(var j=2;j<arr[i];j++){
+//             if(arr[i]%j==0)
+//             count++;
+//         }
+//         if(count==0){
+//             console.log(arr[i]);
+//         }
+//     }
+// }([1,2,3,4,5,6,7,8,9,10,11]))
+
+//5.PALINDROME 
+(function(arr) {
+    for(var i=0; i<arr.length;i++){
+        var pal=true;
+        var f=0;
+        var l=arr[i].length-1
+        while(f<l){
+            if(arr[i].charAt(f)!=arr[i].charAt(l) ){
+                pal=false;
+                break;
+            }
+            l--;
+            f++;
         }
-        if(count==0){
+        if(pal==true){
             console.log(arr[i]);
         }
     }
-}([1,2,3,4,5,6,7,8,9,10,11]))
+}(["madam","lool","car"]))
