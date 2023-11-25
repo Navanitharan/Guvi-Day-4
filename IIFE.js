@@ -74,19 +74,31 @@
 
 
 //7.REMOVE DUPLICATE
-(function (arr){
-    var nodup=[];
-    for(var i=0; i<arr.length; i++){
-        var count=0;
-        for(var j=i+1;j<arr.length;j++){
-            if(arr[j]==arr[i]){
-                count++;
-            }
-        }
-        if(count==0){
-            nodup.push(arr[i]);
-        }
-    }
-    console.log(nodup)
-})([1,2,3,4,2,6,3])
+// (function (arr){
+//     var nodup=[];
+//     for(var i=0; i<arr.length; i++){
+//         var count=0;
+//         for(var j=i+1;j<arr.length;j++){
+//             if(arr[j]==arr[i]){
+//                 count++;
+//             }
+//         }
+//         if(count==0){
+//             nodup.push(arr[i]);
+//         }
+//     }
+//     console.log(nodup)
+// })([1,2,3,4,2,6,3])
+
+//8.ROTTATE ARRAY K TIMES
+(function(n,arr){
+while(n!=0){
+    var pop=arr.pop()
+    arr.unshift(pop);
+    n--;
+}
+console.log(arr)
+})(2,[1,2,3,4,5])
+
+
 
